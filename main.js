@@ -11,7 +11,12 @@
  * @returns {string} containing number converted to output system
  */
 export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-  //TODO code
+	let m = inputNumber.length
+	let decNumber = 0
+	for (let i = 0; i < m; i++) {
+		decNumber= decNumber+parseInt(inputNumber[i])*inputNumberSystem**(m-1-i)
+	}
+	let dtoOut = decNumber.toString();
   //let dtoOut = exMain(inputNumber, inputNumberSystem, outputNumberSystem);
   return dtoOut;
 }
@@ -22,7 +27,7 @@ export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
  * @returns {Array} array of numbers refering to permitted input systems
  */
 export function permittedInputSystems() {
-	return [10, 2];
+	return [2];
 }
 
 /**
@@ -31,5 +36,5 @@ export function permittedInputSystems() {
  * @returns {Array} array of numbers refering to permitted output systems
  */
 export function permittedOutputSystems() {
-	return [10, 2];
+	return [10];
 }
